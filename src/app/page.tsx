@@ -5,16 +5,16 @@ export default function Page() {
   const [dark, setDark] = useState(true);
 
   const me = {
-    name: "Tu Nombre",
-    role: "Integraciones · Cloud · Data",
+    name: "Nis Steingart Fatima",
+    role: "Estudiante de Ingeniería en Telecomunicaciones",
     headline:
-      "Ingeniería en Telecomunicaciones orientada a integraciones de streaming, automatización y analítica en la nube.",
+      "Orientada a integraciones, automatización, cloud y data science.",
     summary:
-      "Diseño, despliegue y observabilidad de pipelines de video y datos. Enfoque en calidad de servicio (QoS), time-to-delivery y seguridad.",
+      "Enfocada hacia el desarrollo de soluciones tecnológicas que integren cloud, automatización y análisis de datos.",
     location: "AR · Remoto/On-site",
-    email: "tu.email@dominio.com",
-    github: "https://github.com/usuario",
-    linkedin: "https://www.linkedin.com/in/usuario",
+    email: "fatimacandelanis@gmail.com",
+    github: "https://github.com/SteingartFatima",
+    linkedin: "https://www.linkedin.com/in/fatima-candela-nis-44a3a6302",
   };
 
   const skills = [
@@ -97,12 +97,15 @@ export default function Page() {
 
   const education = [
     {
-      title: "Ing. en Telecomunicaciones (en curso)",
-      org: "Tu Univ.",
+      title: "Ingeniería en Telecomunicaciones (4to año)",
+      org: "UADER-FCYT",
       year: "2025",
     },
-    { title: "AWS Cloud Practitioner (objetivo)", org: "AWS", year: "2025" },
-    { title: "Kubernetes for Devs (labs)", org: "Labs/Hands-on", year: "2025" },
+    {
+      title: "Diplomatura en Ciencia de Datos e Inteligencia Artificial",
+      org: "UNSAM",
+      year: "2023",
+    },
   ];
 
   const nav = useMemo(
