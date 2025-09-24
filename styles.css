@@ -1,0 +1,104 @@
+/* Paleta */
+:root{
+  --bg:#0D1B2A;
+  --card:#1B263B;
+  --line:#415A77;
+  --text:#E0E1DD;
+  --muted:#AAB8C2;
+  --accent:#4A90E2;
+  --accent-2:#1E90FF;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  font-size:16px;
+}
+
+/* Layout helpers */
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.narrow{max-width:800px}
+.section{padding:64px 0}
+.section.alt{background:var(--card)}
+.muted{color:var(--muted)}
+.list{padding-left:18px}
+
+/* Header */
+.topbar{
+  position:sticky;top:0;z-index:10;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brand{font-weight:700}
+.brand span{color:var(--accent)}
+.nav a{
+  color:var(--muted);text-decoration:none;margin-left:18px;
+  padding-bottom:2px;border-bottom:2px solid transparent;
+  transition:color .2s, border-color .2s;
+}
+.nav a:hover{color:#fff;border-color:var(--accent)}
+
+/* Headings */
+h1{font-size:28px;margin:0 0 10px}
+h2{font-size:24px;margin:0 0 18px;color:#fff}
+h3{font-size:16px;margin:0 0 10px;color:#fff}
+.lead{font-size:18px;color:var(--text)}
+
+/* Skills */
+.skills{
+  display:grid;gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{
+  background:var(--bg);border:1px solid var(--line);color:var(--text);
+  padding:6px 10px;border-radius:999px;font-size:14px;
+}
+
+/* Card proyecto */
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:20px;margin:20px 0;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pill{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+
+/* Botones */
+.btn{
+  display:inline-block;cursor:pointer;
+  background:var(--accent);color:#fff;border:2px solid var(--accent);
+  padding:10px 16px;border-radius:12px;text-decoration:none;
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(74,144,226,.35)}
+.btn.outline{
+  background:transparent;color:var(--accent);
+  border-color:var(--accent);
+}
+.btn.outline:hover{background:var(--accent);color:#fff}
+
+/* Footer */
+.footer{
+  border-top:1px solid var(--line);padding:22px 0;color:var(--muted);
+  background:var(--bg);text-align:center
+}
+
+/* Anclas: que el header no oculte títulos */
+section{scroll-margin-top:80px}
+
+/* Responsive detalles */
+@media (max-width:720px){
+  .nav a{margin-left:12px}
+  h1{font-size:24px}
+  .lead{font-size:17px}
+}
